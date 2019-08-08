@@ -39,6 +39,8 @@ namespace Service
                 c.SwaggerDoc("v1", new Info { Title = "Authentication API", Version = "v1" });
             });
 
+
+
             services.AddBusinessLogic(Configuration.GetConnectionString("LicenseProject"));
             services.AddApiVersioning(o => o.ApiVersionReader = new HeaderApiVersionReader("api-version"));
         }
